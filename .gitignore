@@ -73,3 +73,7 @@ package-lock.json/
 # ENV
 .env
 .dotENV
+/Class-Notes-CSS3.md
+/Class-Notes-Git-Bash.md
+/Class-Notes-Semantic-HTML.md
+/Class-Notes.md
