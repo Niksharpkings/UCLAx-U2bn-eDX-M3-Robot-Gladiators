@@ -1,0 +1,710 @@
+
+:root {
+/*Miscellaneous*/
+  --primary-shadow-color: 0 0 10px #ffffff, 0 0 20px #ffd100, 0 0 30px #ffd100, 0 0 40px #ffd100;
+  --primary-hex-color: #2774ae;
+  --secondary-hex-color: #ffd100;
+  --background-white-rgb-color: rgba(255, 255, 255, 1);
+  color-scheme: light dark;
+  scrollbar-color: #2774ae #ffd100;
+}/* root element (sort of the <html> element) pseudo-class for global scoped variables*/ 
+/* https://www.w3schools.com/cssref/index.php */
+
+* {
+  /*Box model stuff*/
+  padding: 0;
+  /*Typography stuff*/
+  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /*Miscellaneous*/
+  box-sizing: border-box;
+  /* cursor: url(../cursorfavicon/niksharpfavicon64x.ico), auto; */
+  /*Miscellaneous*/
+  /*Manipulations stuff*/
+  animation-name: cursor;
+  animation-duration: 2s;
+  animation-direction: normal;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  touch-action: manipulation;
+}/* wildcard */
+
+html * {
+  touch-action: manipulation;
+}
+
+body {
+/*Box model stuff*/
+  background-color: var(--secondary-hex-color);
+/*Typography stuff*/
+  font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+  font-weight: 300;
+/*Miscellaneous*/
+  overflow: visible;
+} /* body */
+
+header {
+/*Display stuff*/
+  display: flex;
+  /* flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between; */
+/*Positioning stuff*/
+  position: sticky;
+  top: 0;
+  z-index: 1;
+/*Box model stuff*/
+  padding: 10px 30px;
+  border: var(--secondary-hex-color) 10px double;
+  background-attachment: fixed;
+  background-color: var(--primary-hex-color);
+  background-position: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+/*Miscellaneous*/
+  list-style-type: none;
+  overflow: hidden;
+} /* header */
+
+header h1 a {
+  font-size: 25px;
+}
+header h1 p {
+  font-size: 15px;
+}
+nav {
+/*Display stuff*/
+  flex-wrap: wrap;
+  align-items: center;
+/*Box model stuff*/
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+/*Typography stuff*/
+  font-size: 20px;
+  text-align: center;
+  text-shadow: var(--primary-shadow-color);
+} /* navigation */
+
+header nav li {
+/*Display stuff*/
+  display: inline-block;
+/*Box model stuff*/
+  margin: 10px;
+  padding: 0px;
+/*Miscellaneous*/
+  list-style: none;
+} /* navigation list item */
+
+header nav li a {
+/*Display stuff*/
+  display: block;
+/*Positioning stuff*/
+  z-index: 1;
+/*Box model stuff*/
+  margin: 0;
+  padding: 5px 10px;
+  border-radius: 3px;
+  outline-color: var(--secondary-hex-color);
+  outline-style: double;
+  outline-width: 5px;
+  background-color: var(--secondary-hex-color);
+/*Typography stuff*/
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--primary-hex-color);
+/*Miscellaneous*/
+  line-height: 1.5;
+} /* navigation list item link */
+
+header nav li a:hover {
+/*Positioning stuff*/
+  z-index: 1;
+/*Box model stuff*/
+  padding: 5px 10px;
+  border-radius: 3px;
+  outline-color: var(--primary-hex-color);
+  outline-style: dashed;
+  outline-width: 2px;
+  background-color: var(--primary-hex-color);
+/*Typography stuff*/
+  text-decoration: none;
+  color: var(--secondary-hex-color);
+/*Manipulations stuff*/
+  filter: saturate(1) contrast(200%) drop-shadow(5px 5px 2rem var(--secondary-hex-color)) brightness(1) sepia(5%) opacity(95%) hue-rotate(4deg) grayscale(50%) blur(0px) invert(5%);
+  transform: scale(0.9) rotate(5deg) translate(10%, 10%);
+/*Miscellaneous*/
+  box-shadow: 2px 0px 1px var(--primary-hex-color);
+} /* navigation list item link hover */
+
+header nav li a:active {
+/*Box model stuff*/
+  padding: 5px 10px;
+  border-radius: 3px;
+  outline-color: var(--primary-hex-color);
+  outline-style: dashed;
+  outline-width: 2px;
+  background-color: var(--primary-hex-color);
+/*Typography stuff*/
+  text-decoration: none;
+  color: var(--secondary-hex-color);
+/*Miscellaneous*/
+  box-shadow: 2px 0px 1px var(--primary-hex-color);
+} /* navigation list item link active */
+
+header nav li a:focus {
+/*Positioning stuff*/
+  z-index: 1;
+/*Box model stuff*/
+  padding: 5px 10px;
+  border-radius: 3px;
+  outline-color: var(--primary-hex-color);
+  outline-style: dashed;
+  outline-width: 2px;
+  background-color: var(--primary-hex-color);
+/*Typography stuff*/
+  text-decoration: none;
+  color: var(--secondary-hex-color);
+/*Miscellaneous*/
+  box-shadow: 2px 0px 1px var(--primary-hex-color);
+} /* navigation list item link focus */
+
+.tooltip-nav {
+/*Display stuff*/
+  display: inline-block;
+/*Positioning stuff*/
+  position: relative;
+/*Box model stuff*/
+  border-bottom: 1px dotted black;
+/*Typography stuff*/
+  font-size: 14px;
+  color: var(--primary-hex-color);
+} /* tooltip at navigation */
+
+.tooltip-nav .tooltiptext-nav{
+/*Positioning stuff*/
+  position: absolute;
+  left: -5%;
+  top: 30px;
+  z-index: 4;
+/*Box model stuff*/
+  width: auto;
+  padding: 2px 2px;
+  border-radius: 6px;
+  background-color: black;
+/*Typography stuff*/
+  text-align: center;
+  color: var(--secondary-hex-color);
+/*Manipulations stuff*/
+  opacity: 0;
+/*Miscellaneous*/
+  visibility: hidden;
+} /* tooltip at navigation text */
+
+.tooltip-nav:hover .tooltiptext-nav {
+/*Miscellaneous*/
+  visibility: visible;
+  /*Manipulations stuff*/
+  opacity: 1;
+} /* tooltip at navigation hover */
+
+hr {
+/*Box model stuff*/
+  border: none;
+/*Typography stuff*/
+  text-align: center;
+  color: #333;
+/*Miscellaneous*/
+  overflow: visible;
+} /* horizontal rule */
+
+hr:after {
+/*Display stuff*/
+  content: "⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘";
+/*Box model stuff*/
+  padding: 0 0px;
+} /* horizontal rule after */
+
+
+
+details {
+/*Display stuff*/
+  display: flex;
+  align-content: center;
+  align-items: stretch;
+  align-self: center;
+  justify-content: center;
+  justify-items: center;
+  justify-self: center;
+/*Box model stuff*/
+  width: auto;
+  max-width: 1200px;
+  padding: 0.5em 0.5em 0;
+  border: 1px dotted;
+  border-radius: 4px;
+} /* resume section details */
+
+summary {
+/*Display stuff*/
+ /* display: flex;
+  align-items: stretch;
+  align-self: stretch;
+  justify-content: center;
+  justify-items: center;
+/*Box model stuff*/
+ /* width: 1200px;*/
+  max-width: 1200px;
+ /* margin: -0.5em -0.5em 0; */
+  padding: 0.5em;
+/*Typography stuff*/
+  font-weight: bold;
+  text-align: center;
+} /* resume section details summary */
+summary h2 {
+  color: var(--secondary-hex-color);
+  } /* resume section details summary */
+mark {
+/*Box model stuff*/
+  padding: 2px;
+  background-color: var(--primary-hex-color);
+/*Typography stuff*/
+  color: var(--secondary-hex-color);
+} /* resume section details summary mark */
+
+mark:hover {
+/*Box model stuff*/
+  background-color: var(--secondary-hex-color);
+/*Typography stuff*/
+  color: var(--primary-hex-color);
+} /* resume section details summary mark */
+
+details[open] {
+/*Box model stuff*/
+  padding: 0.5em;
+  background-color: black;
+/*Typography stuff*/
+  font-size: 14px;
+  font-weight: bold;
+  color: green;
+  /*Miscellaneous*/
+  -webkit-animation: projects 1s ease-in-out infinite alternate;
+  /*Manipulations stuff*/
+  animation: projects 1s ease-in-out alternate;
+  touch-action: manipulation;
+} /* resume section details open */
+
+details[open] summary {
+/*Box model stuff*/
+  margin-bottom: 0.5em;
+  border-bottom: 1px solid #aaa;
+  background-color: var(--primary-hex-color);
+/*Typography stuff*/
+  color: var(--secondary-hex-color);
+} /* resume section details open summary */
+
+.projects {
+/*Display stuff*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+/*Box model stuff*/
+  border: 10px ridge var(--secondary-hex-color);
+  background-color: var(--primary-hex-color);
+/*Typography stuff*/
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  color: var(--secondary-hex-color);
+} /* projects section */
+
+.project-header {
+/*Typography stuff*/
+  font-size: calc(26px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+  text-shadow: var(--primary-shadow-color);
+  color: var(--primary-hex-color);
+} /* projects section heading */
+
+.project-title{
+/*Display stuff*/
+  display: inline-flex;
+  justify-content: center;
+/*Box model stuff*/
+  width: max(200px, 10%);
+  border: thin var(--secondary-hex-color) solid;
+  background-color: rgb(0, 0, 0);
+} /* projects section title */
+
+.project-grid-container {
+/*Display stuff*/
+  display: flex;
+  flex-flow: row wrap;
+  grid-template-areas: "left right";
+  grid-template-columns: 400px 400px;
+  grid-template-rows: 200px 200px;
+  justify-content: center;
+/*Positioning stuff*/
+  position: relative;
+/*Box model stuff*/
+  max-width: 100%;
+  margin: auto;
+/*Miscellaneous*/
+  overflow: hidden;
+  object-fit: fill;
+} /* projects section grid container */
+
+.project-container-left {
+/*Display stuff*/
+  grid-area: left;
+/*Box model stuff*/
+  width: 600px;
+  max-width: 600px;
+  min-width: 100px;
+  max-height: 400px;
+  min-height: 100px;
+  border: thin var(--secondary-hex-color) solid;
+  background-color: rgb(0, 0, 0);
+/*Typography stuff*/
+  font-size: calc(16px + (16 - 14) * ((100vw - 300px) / (1600 - 300)));
+/*Miscellaneous*/
+  overflow: auto;
+} /* projects section grid container left */
+
+.project-repository-dialog {
+/*Box model stuff*/
+  padding-left: 5px;
+/*Typography stuff*/
+  font-family: monospace;
+  font-size: 12px;
+  text-align: left;
+} /* projects section grid container left repository dialog */
+
+.project-container-right {
+/*Display stuff*/
+  display: block;
+  grid-area: right;
+/*Box model stuff*/
+  width: 600px;
+  max-width: 600px;
+  min-width: 100px;
+  max-height: 400px;
+  min-height: 100px;
+  border: thin var(--secondary-hex-color) solid;
+  background-size: contain;
+} /* projects section grid container right */
+
+img.project-container-right-img {
+/*Display stuff*/
+  display: block;
+/*Box model stuff*/
+  width:100%;
+  height: 200px;
+  background-size: contain;
+} /* projects section grid container right image */
+
+figure {
+/*Display stuff*/
+  display: flex;
+  flex-flow: column;
+/*Box model stuff*/
+  width: 600px;
+  margin: auto;
+  padding: 5px;
+  border: thin #c0c0c0 solid;
+  background-color: black;
+} /* projects section grid container right figure */
+
+figcaption {
+/*Box model stuff*/
+  width: auto;
+  padding: 3px;
+  border: thin var(--secondary-hex-color) solid;
+  background-color: #222;
+/*Typography stuff*/
+  font: italic smaller sans-serif;
+  text-align: left;
+  color: #fff;
+} /* projects section grid container right figure caption */
+
+footer {
+/*Display stuff*/
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+/*Box model stuff*/
+  border: 10px ridge var(--secondary-hex-color);
+  background-color: var(--primary-hex-color);
+/*Typography stuff*/
+  font-size: clamp(1.5rem, 1.8vw, 1.8rem);
+  font-weight: bold;
+  text-align: center;
+  color: var(--primary-hex-color);
+} /* footer section */
+
+footer p{
+  /*Typography stuff*/
+  font-size: clamp(1.8rem, 1.8vw, 2rem);
+  color: var(--secondary-hex-color);
+} /* footer section paragraph */
+
+footer details[open] summary {
+  background-color: var(--primary-hex-color);
+  border-bottom: 1px solid #aaa;
+  color: var(--primary-hex-color);
+  margin-bottom: 0.5em;
+} /* footer section details open summary */
+
+.tooltip {
+  /*Display stuff*/
+  display: inline-block;
+  /*Positioning stuff*/
+  position: relative;
+  /*Box model stuff*/
+  border-bottom: 1px dotted black;
+  /*Typography stuff*/
+  color: var(--primary-hex-color);
+} /* tooltip */
+
+.tooltip .tooltiptext {
+  /*Positioning stuff*/
+  position: absolute;
+  left: 105%;
+  top: -5px;
+  z-index: 4;
+  /*Box model stuff*/
+  width: auto;
+  padding: 10px 10px;
+  border-radius: 6px;
+  background-color: black;
+  /*Typography stuff*/
+  text-align: center;
+  color: var(--secondary-hex-color);
+  /*Miscellaneous*/
+  visibility: hidden;
+  /* Position the tooltip */
+} /* tooltip text */
+
+.tooltip:hover .tooltiptext {
+  /*Miscellaneous*/
+  visibility: visible;
+} /* tooltip text hover */
+
+#contact-me {
+  width: auto;
+} /* contact me section */
+
+#contact-me > details > h4 {
+  font-size:  25px;
+} /* contact me section details h4 */
+
+#contact-me > details > div {
+/*Display stuff*/
+  display: flex;
+  align-items: stretch;
+  align-self: stretch;
+  justify-content: space-around;
+  justify-items: center;
+/*Box model stuff*/
+  width: auto;
+  border: thin var(--secondary-hex-color) solid;
+/*Typography stuff*/
+  font-size:  20px;
+} /* contact me section details div */
+
+.contact-info iframe {
+/*Box model stuff*/
+  max-width: 600px;
+  max-height: 600px;
+  border: 1px solid black;
+} /* contact me section details div iframe */
+
+
+@media only screen and (max-width: 1200px) {
+  details,
+  summary {
+    max-width: 980px;
+    width: 980px;
+  }
+}
+
+/* MEDIA QUERY FOR SMALLER DESKTOP SCREENS The "only" is to prevent older browser that do not support media queries*/
+@media only screen and (max-width: 980px) {
+  html {
+    overflow: auto;
+    font-size: 20px;
+  }
+
+  nav ul li a {
+    font-size: 20px;
+  }
+
+  details,
+  summary {
+    max-width: 640px;
+    width: 640px;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  html {
+    overflow: auto;
+    font-size: 16px;
+  }
+
+  nav ul li a {
+    font-size: 16px;
+  }
+
+  hr {
+    overflow: visible;
+    text-align: center;
+    height: 5px;
+  }
+
+  hr:after {
+    content: "⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘⫘";
+    padding: 0 0px;
+    position: relative;
+    top: -20px;
+  }
+
+  .hero-intro h1{
+    font-size: 16px;
+    top: 30px;
+  }
+
+  .hero-intro img {
+    transform: scale(0.7);
+  }
+
+  .hero-intro {
+    padding: 0 0px;
+    font-size: 18px;
+    top: -30px;
+  }
+
+  #hero-name {
+    font-size: 20px;
+    position: relative;
+    top: -20px;
+  }
+
+  details,
+  summary {
+    max-width: 480px;
+    width: 480px;
+  }
+
+  .project-grid-container {
+    width: 75%;
+  }
+
+  .projects img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.google-map {
+  border: 1px solid black;
+  width: 480px;
+  height: 480px;
+}
+
+
+@media only screen and (max-width: 480px) {
+  .projects h1 {
+    font-size: 14px;
+  }
+
+  h3 {
+    font-size: 12px;
+  }
+
+  h4 {
+    font-size: 10px;
+  }
+
+  .hero-intro h1{
+    font-size: 12px;
+    top: 30px;
+  }
+  .hero-intro h3{
+    font-size: 10px;
+    top: 30px;
+  }
+  .hero-intro img {
+    transform: scale(0.7);
+  }
+
+  details,
+  summary {
+    max-width: 300px;
+    width: 300px;
+  }
+
+  .project-grid-container {
+    width: 50%;
+  }
+
+  .projects img {
+    width: 100%;
+    height: auto;
+  }
+
+  .contact-info iframe {
+    width: auto;
+    height: auto;
+  }
+}
+
+/* animation for projects */
+@keyframes projects {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* my custom cursor animation https://web.dev/animations-guide/ */
+@keyframes cursor {
+  0% {
+    cursor: url(../cursorfavicon/niksharfavicon16x.ico) 0 0, auto;
+  }
+
+  20% {
+    cursor: url(../cursorfavicon/niksharpfavicon16x.ico) 0 0, auto;
+  }
+
+  40% {
+    cursor: url(../cursorfavicon/niksharfavicon36x.ico) 0 0, auto;
+  }
+
+  60% {
+    cursor: url(../cursorfavicon/niksharpfavicon36x.ico) 0 0, auto;
+  }
+
+  80% {
+    cursor: url(../cursorfavicon/niksharfavicon64x.ico) 0 0, auto;
+  }
+
+  100% {
+    cursor: url(../cursorfavicon/niksharpfavicon64x.ico) 0 0, auto;
+  }
+}
+
+/* website loading up animation */
+@keyframes Loadup {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
