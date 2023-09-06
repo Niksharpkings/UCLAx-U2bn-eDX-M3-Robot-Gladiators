@@ -123,6 +123,8 @@ UCLAx-U2bn-eDX-M3-Robot-Gladiators
 
 ##### Version:
 
+`v2.0.2 - | 3.1 Module |`
+
 `v2.0.1 - | Edited and Pre-Setup the Readme.md, privacy-policy.html, index.html, .gitignore., and index.js | Added Structure Tree to .md| Minor Adjustments to the HTML's and CSS's. Now Starting on the JS. |`
 
 `v2.0.0 - | Added: Readme.md, privacy-policy.html, LICENSE, index.html, .gitignore. index.js  | Started Filled Out Markdown Readme |`
