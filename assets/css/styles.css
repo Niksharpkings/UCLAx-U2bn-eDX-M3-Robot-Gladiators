@@ -7,7 +7,7 @@
   --background-white-rgb-color: rgba(255, 255, 255, 1);
   color-scheme: light dark;
   scrollbar-color: #2774ae #ffd100;
-}/* root element (sort of the <html> element) pseudo-class for global scoped variables*/ 
+}/* root element (sort of the <html> element) pseudo-class for global scoped variables*/
 /* https://www.w3schools.com/cssref/index.php */
 
 * {
@@ -19,7 +19,6 @@
   -moz-osx-font-smoothing: grayscale;
   /*Miscellaneous*/
   box-sizing: border-box;
-  /* cursor: url(../cursorfavicon/niksharpfavicon64x.ico), auto; */
   /*Miscellaneous*/
   /*Manipulations stuff*/
   animation-name: cursor;
@@ -304,104 +303,6 @@ details[open] summary {
   color: var(--secondary-hex-color);
 } /* resume section details open summary */
 
-.projects {
-/*Display stuff*/
-  display: flex;
-  align-items: center;
-  justify-content: center;
-/*Box model stuff*/
-  border: 10px ridge var(--secondary-hex-color);
-  background-color: var(--primary-hex-color);
-/*Typography stuff*/
-  font-size: 14px;
-  font-weight: bold;
-  text-align: center;
-  color: var(--secondary-hex-color);
-} /* projects section */
-
-.project-header {
-/*Typography stuff*/
-  font-size: calc(26px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
-  text-shadow: var(--primary-shadow-color);
-  color: var(--primary-hex-color);
-} /* projects section heading */
-
-.project-title{
-/*Display stuff*/
-  display: inline-flex;
-  justify-content: center;
-/*Box model stuff*/
-  width: max(200px, 10%);
-  border: thin var(--secondary-hex-color) solid;
-  background-color: rgb(0, 0, 0);
-} /* projects section title */
-
-.project-grid-container {
-/*Display stuff*/
-  display: flex;
-  flex-flow: row wrap;
-  grid-template-areas: "left right";
-  grid-template-columns: 400px 400px;
-  grid-template-rows: 200px 200px;
-  justify-content: center;
-/*Positioning stuff*/
-  position: relative;
-/*Box model stuff*/
-  max-width: 100%;
-  margin: auto;
-/*Miscellaneous*/
-  overflow: hidden;
-  object-fit: fill;
-} /* projects section grid container */
-
-.project-container-left {
-/*Display stuff*/
-  grid-area: left;
-/*Box model stuff*/
-  width: 600px;
-  max-width: 600px;
-  min-width: 100px;
-  max-height: 400px;
-  min-height: 100px;
-  border: thin var(--secondary-hex-color) solid;
-  background-color: rgb(0, 0, 0);
-/*Typography stuff*/
-  font-size: calc(16px + (16 - 14) * ((100vw - 300px) / (1600 - 300)));
-/*Miscellaneous*/
-  overflow: auto;
-} /* projects section grid container left */
-
-.project-repository-dialog {
-/*Box model stuff*/
-  padding-left: 5px;
-/*Typography stuff*/
-  font-family: monospace;
-  font-size: 12px;
-  text-align: left;
-} /* projects section grid container left repository dialog */
-
-.project-container-right {
-/*Display stuff*/
-  display: block;
-  grid-area: right;
-/*Box model stuff*/
-  width: 600px;
-  max-width: 600px;
-  min-width: 100px;
-  max-height: 400px;
-  min-height: 100px;
-  border: thin var(--secondary-hex-color) solid;
-  background-size: contain;
-} /* projects section grid container right */
-
-img.project-container-right-img {
-/*Display stuff*/
-  display: block;
-/*Box model stuff*/
-  width:100%;
-  height: 200px;
-  background-size: contain;
-} /* projects section grid container right image */
 
 figure {
 /*Display stuff*/
@@ -570,40 +471,10 @@ footer details[open] summary {
     top: -20px;
   }
 
-  .hero-intro h1{
-    font-size: 16px;
-    top: 30px;
-  }
-
-  .hero-intro img {
-    transform: scale(0.7);
-  }
-
-  .hero-intro {
-    padding: 0 0px;
-    font-size: 18px;
-    top: -30px;
-  }
-
-  #hero-name {
-    font-size: 20px;
-    position: relative;
-    top: -20px;
-  }
-
   details,
   summary {
     max-width: 480px;
     width: 480px;
-  }
-
-  .project-grid-container {
-    width: 75%;
-  }
-
-  .projects img {
-    width: 100%;
-    height: auto;
   }
 }
 
@@ -627,37 +498,12 @@ footer details[open] summary {
     font-size: 10px;
   }
 
-  .hero-intro h1{
-    font-size: 12px;
-    top: 30px;
-  }
-  .hero-intro h3{
-    font-size: 10px;
-    top: 30px;
-  }
-  .hero-intro img {
-    transform: scale(0.7);
-  }
-
   details,
   summary {
     max-width: 300px;
     width: 300px;
   }
 
-  .project-grid-container {
-    width: 50%;
-  }
-
-  .projects img {
-    width: 100%;
-    height: auto;
-  }
-
-  .contact-info iframe {
-    width: auto;
-    height: auto;
-  }
 }
 
 /* animation for projects */
@@ -668,33 +514,6 @@ footer details[open] summary {
 
   to {
     opacity: 1;
-  }
-}
-
-/* my custom cursor animation https://web.dev/animations-guide/ */
-@keyframes cursor {
-  0% {
-    cursor: url(../cursorfavicon/niksharfavicon16x.ico) 0 0, auto;
-  }
-
-  20% {
-    cursor: url(../cursorfavicon/niksharpfavicon16x.ico) 0 0, auto;
-  }
-
-  40% {
-    cursor: url(../cursorfavicon/niksharfavicon36x.ico) 0 0, auto;
-  }
-
-  60% {
-    cursor: url(../cursorfavicon/niksharpfavicon36x.ico) 0 0, auto;
-  }
-
-  80% {
-    cursor: url(../cursorfavicon/niksharfavicon64x.ico) 0 0, auto;
-  }
-
-  100% {
-    cursor: url(../cursorfavicon/niksharpfavicon64x.ico) 0 0, auto;
   }
 }
 

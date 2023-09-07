@@ -303,29 +303,3 @@ footer p{
     opacity: 1;
   }
 }
-
-@keyframes cursor {
-  0% {
-    cursor: url(../cursorfavicon/niksharfavicon16x.ico) 0 0, crosshair;
-  }
-
-  20% {
-    cursor: url(../cursorfavicon/niksharpfavicon16x.ico) 0 0, crosshair;
-  }
-
-  40% {
-    cursor: url(../cursorfavicon/niksharfavicon36x.ico) 0 0, crosshair;
-  }
-
-  60% {
-    cursor: url(../cursorfavicon/niksharpfavicon36x.ico) 0 0, crosshair;
-  }
-
-  80% {
-    cursor: url(../cursorfavicon/niksharfavicon64x.ico) 0 0, crosshair;
-  }
-
-  100% {
-    cursor: url(../cursorfavicon/niksharpfavicon64x.ico) 0 0, crosshair;
-  }
-}
