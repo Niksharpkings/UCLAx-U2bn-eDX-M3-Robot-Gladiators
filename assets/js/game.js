@@ -24,7 +24,12 @@ for (let i = 0; i < enemyNames.length; i++) {
   console.log(`${enemyNames[i]} is at ${i} index`);
 };
 
+// function to generate a random numeric value
+var randomNumber = function(min, max) {
+  var value = Math.floor(Math.random() * (max - min + 1) + min);
 
+  return value;
+};
 
 const fight = (enemyName) => {
   while (playerHealth > 0 && enemyHealth > 0) {
@@ -46,8 +51,11 @@ const fight = (enemyName) => {
       }
     }
 
-    // remove enemy's health by subtracting the amount set in the playerAttack variable
-    enemyHealth -= playerAttack;
+    // generate random damage value based on player's attack power
+    var damage = randomNumber(playerAttack - 3, playerAttack);
+     // remove enemy's health by subtracting the amount set in the playerAttack variable
+    enemyHealth = Math.max(0, enemyHealth - damage);
+
     console.log(
       `${playerName} attacked ${enemyName}. ${enemyName} now has ${enemyHealth} health remaining.`
     );
@@ -57,7 +65,7 @@ const fight = (enemyName) => {
       window.alert(`${enemyName} has died!`);
 
       // award player money for winning
-      playerMoney += 20;
+      playerMoney = Math.max(0, playerMoney - 10);
       // leave while() loop since enemy is dead
       break;
     } else {
@@ -65,7 +73,9 @@ const fight = (enemyName) => {
     }
 
     // remove players's health by subtracting the amount set in the enemyAttack variable
-    playerHealth -= enemyAttack;
+    var damage = randomNumber(enemyAttack - 3, enemyAttack);
+
+playerHealth = Math.max(0, playerHealth - damage);
     console.log(
       `${enemyName} attacked ${playerName}. ${playerName} now has ${playerHealth} health remaining.`
     );
@@ -137,7 +147,7 @@ const startGame = function () {
       // pick new enemy to fight based on the index of the enemyNames array
       let pickedEnemyName = enemyNames[i];
       // reset enemyHealth before starting new fight
-      enemyHealth = 50;
+      enemyHealth = randomNumber();
       // use debugger to pause script from running and check what's going on at that moment in the code
       // debugger;
       // pass the pickedEnemyName variable's value into the fight function, where it will assume the value of the enemyName parameter
