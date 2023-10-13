@@ -2,16 +2,26 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
+  <meta http-equiv="Cache-Control" content="no-cache, max-age=0">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta http-equiv="Cache-Control" content="no-cache, max-age=3600">
+  <!-- max-age=3600  | no-store | private | public | https://web.dev/articles/http-cache ]-->
   <title>UCLAx-U2bn-eDX-M3-Robot-Gladiators</title>
   <link title="stylesheet" integrity="text" media="only screen and (color)" rel="stylesheet" type="text/css"
     href="./assets/css/styles.css" />
-  
 </head>
 
-<body>
+<body onclick="myFunction()">
+  <p>The URL Property</p>
+  <p id="URL"></p>
+  <p>The location of this document is:</p>
+  <p id="locationDocument"></p>
+  <p id="baseURL"></p>
+  <p id="activeElement"></p>
+  <p>Window's width and height is:</p>
+  <p id="widthNheight"></p>
+
   <header>
     <h1>
       <a href="/">Robot Gladiators Version: 2.0.4</a>
@@ -24,16 +34,18 @@
             rel="noopener canonical noreferrer help">Main Page</a>
         </li>
         <li>
-          <a title="Main Home" type="text/html" hreflang="en" href="https://niksharpkings.github.io/my-portfolio-uclax-C2/" target="_blank"
+          <a title="Main Home" type="text/html" hreflang="en"
+            href="https://niksharpkings.github.io/my-portfolio-uclax-C2/" target="_blank"
             rel="noopener canonical noreferrer help">UCLAx Profile Page</a>
         </li>
         <li>
-          <a title="Main Home" type="text/html" hreflang="en" href="https://github.com/Niksharpkings/UCLAx-U2bn-eDX-M3-Robot-Gladiators" target="_blank"
+          <a title="Main Home" type="text/html" hreflang="en"
+            href="https://github.com/Niksharpkings/UCLAx-U2bn-eDX-M3-Robot-Gladiators" target="_blank"
             rel="noopener canonical noreferrer help">GitHub Repo</a>
         </li>
         <li>
-          <a title="Privacy Policy" type="text/html" hreflang="en" href="./assets/html/privacy-policy.html" target="_blank"
-            rel="noopener canonical noreferrer help">Privacy Policy</a>
+          <a title="Privacy Policy" type="text/html" hreflang="en" href="./assets/html/privacy-policy.html"
+            target="_blank" rel="noopener canonical noreferrer help">Privacy Policy</a>
         </li>
       </ul>
     </nav>
@@ -44,7 +56,8 @@
       <details> <!-- Detail tag -->
         <summary class="legend-3-span"> <!-- Details' summary tag -->
           <h2>📬 Contact Me 📭</h2> <!-- Paragraph tag for Contact me -->
-            <mark>» Click Me To Expand Below «</mark><!-- a drop down mark tag to show a list of my contact list of info -->
+          <mark>» Click Me To Expand Below
+            «</mark><!-- a drop down mark tag to show a list of my contact list of info -->
         </summary>
         <h4 class="edit-info">[Hover over] or [click on the link] to see the info below.
           <br> Note: Due to privacy concerns, you'll have to rename/replace the
@@ -61,7 +74,8 @@
             </a>
           </div>
           <div class="contact-list-item">
-            <a rel="noreferrer canonical noopener" target="_blank" hreflang=en href="https://github.com/niksharpkings">
+            <a rel="noreferrer canonical noopener" target="_blank" hreflang="en"
+              href="https://github.com/niksharpkings">
               <!-- My Github page - anchor tag -->
               <p class="tooltip">
                 ◼Github:
@@ -71,7 +85,7 @@
             </a>
           </div>
           <div class="contact-list-item">
-            <a hreflang=en rel="nofollow canonical noopener" href="https://my.indeed.com/p/Ńἱĸἱtâ$-18b6zfq">
+            <a hreflang="en" rel="nofollow canonical noopener" href="https://my.indeed.com/p/Ńἱĸἱtâ$-18b6zfq">
               <!-- My Indeed page - anchor tag -->
               <p class="tooltip">
                 ◼Indeed:
@@ -81,7 +95,8 @@
             </a>
           </div>
           <div class="contact-list-item">
-            <a hreflang=en rel="nofollow canonical noopener" href="https://www.linkedin.com/in/Ńἱĸἱtâ$hârρi0-18609ba6/">
+            <a hreflang="en" rel="nofollow canonical noopener"
+              href="https://www.linkedin.com/in/Ńἱĸἱtâ$hârρi0-18609ba6/">
               <!-- My Linkedin - anchor tag -->
               <p class="tooltip">
                 ◼Linkedin:
@@ -115,6 +130,26 @@
   </footer>
   <!-- end footer -->
   <!--JavaScripts-->
+  <script>
+    let uri = document.documentURI;
+    document.getElementById("locationDocument").innerHTML = uri;
+
+    let documentURL = document.URL;
+    document.getElementById("URL").innerHTML = documentURL;
+
+    let base = document.baseURI;
+    document.getElementById("baseURL").innerHTML = base;
+
+    function myFunction() {
+      const element = document.activeElement.tagName;
+      document.getElementById("activeElement").innerHTML = element;
+    }
+    const view = document.defaultView;
+    let width = view.innerWidth;
+    let height = view.innerHeight;
+    document.getElementById("widthNheight").innerHTML = width + "x" + height;
+
+  </script>
   <script src="./assets/js/game.js"></script>
   <noscript>Your browser does not support JavaScript!</noscript>
 </body>
