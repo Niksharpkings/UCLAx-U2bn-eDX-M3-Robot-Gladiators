@@ -122,6 +122,7 @@ UCLAx-U2bn-eDX-M3-Robot-Gladiators
 ```
 
 ##### Version:
+`v2.0.5 - | 3.4 & 3.5 Module |`
 
 `v2.0.4 - | 3.3 Module |`
 
