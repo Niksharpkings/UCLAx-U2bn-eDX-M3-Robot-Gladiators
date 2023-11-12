@@ -1,4 +1,4 @@
-# Project Name: `Robot Gladiators`
+# Project Name: `Robot Gladiators V2 (Modified)`
 
 ## GitHub Repo Name: `UCLAx-U2bn-eDX-M3-Robot-Gladiators`
 
@@ -6,7 +6,7 @@
 
 > Originally Done At: Jan 17, 2022 // 24h
 
-> Remastered/Revamped At: Sept 5, 2023
+> Remastered/Revamped At: Nov 12, 2023
 
 ---
 
@@ -20,7 +20,7 @@ Full-Stack Web Development Coding Boot Camp Program:
 > - U2 BootCamp Network
 > - edX Boot Camps LLC
 
-| Recreated by:
+| Recreated and redesigned by:
 
 > - Nikita "Nik" Sharpio aka Niksharpkings
 
@@ -85,6 +85,16 @@ Full-Stack Web Development Coding Boot Camp Program:
 >   *Description:*
 > - Create and use JavaScript objects to organize data related to the player and data related to the enemies.
 > - Create object methods to perform player actions.
+> - Validated player input(s) prior to running the operations.
+> - Refactored code for simplicity and maintainability.
+> - Used a few recursive function(s).
+> - Distinguished and converted between number and string types by using toLowerCase() method.
+> - Learned how to persist data in the browser by using `localStorage`.
+> - Used **Primitive data types** to stored and manipulated data.
+> - Invoked **Functions** when desired, offered control over the application's actions, less repetition, and abstraction that can isolate potential bugs and data variables.
+> - **Objects** to store properties and methods.
+> - **Control flow statements**, such as conditional statements: `for` and `while` loops, which can be used to direct the order of operations and behavior of the application.
+> - The `console.log` and Chrome's `debugger` statements to reveal values of variables at specific moments in the application's execution process.
 
 ---
 
@@ -92,8 +102,9 @@ Full-Stack Web Development Coding Boot Camp Program:
 
 #### Coding Language Used:
 
-1) `HTML5 [(Vanilla)/(default)] `
+1) `HTML5 [(Vanilla)/(Default)] `
 2) `CSS3`
+3) `Javascript [(Vanilla)/(default)]`
 
 #### Program/Software Used:
 
@@ -106,7 +117,6 @@ Full-Stack Web Development Coding Boot Camp Program:
 
 ```
 UCLAx-U2bn-eDX-M3-Robot-Gladiators
-├─ .git
 ├─ .gitignore
 ├─ assets
 │  ├─ css
@@ -115,24 +125,28 @@ UCLAx-U2bn-eDX-M3-Robot-Gladiators
 │  ├─ html
 │  │  └─ privacy-policy.html
 │  └─ js
-│     └─ script.js
+│     └─ game-no-commets.js
+│     └─ game.js
 ├─ index.html
 ├─ LICENSE
 └─ README.md
 ```
 
 ##### Version:
-`v2.0.5 - | 3.4 & 3.5 Module |`
 
-`v2.0.4 - | 3.3 Module |`
+`v2.0.1 - | Revamped / Redone / Remastered - Basicilly, I remade it my way and better then the original |`
 
-`v2.0.3 - | 3.2 Module |`
+`v1.0.5 - | 3.4 & 3.5 Module |`
 
-`v2.0.2 - | 3.1 Module |`
+`v1.0.4 - | 3.3 Module |`
 
-`v2.0.1 - | Edited and Pre-Setup the Readme.md, privacy-policy.html, index.html, .gitignore., and index.js | Added Structure Tree to .md| Minor Adjustments to the HTML's and CSS's. Now Starting on the JS. |`
+`v1.0.3 - | 3.2 Module |`
 
-`v2.0.0 - | Added: Readme.md, privacy-policy.html, LICENSE, index.html, .gitignore. index.js  | Started Filled Out Markdown Readme |`
+`v1.0.2 - | 3.1 Module |`
+
+`v1.0.1 - | Edited and Pre-Setup the Readme.md, privacy-policy.html, index.html, .gitignore., and index.js | Added Structure Tree to .md| Minor Adjustments to the HTML's and CSS's. Now Starting on the JS. |`
+
+`v1.0.0 - | Added: Readme.md, privacy-policy.html, LICENSE, index.html, .gitignore. index.js  | Started Filled Out Markdown Readme |`
 
 ---
 
@@ -151,5 +165,3 @@ UCLAx-U2bn-eDX-M3-Robot-Gladiators
 ###### Licence, Privacy & Policy Note:
 
 > This repoitory and contents was originally created and designed by UCLA Extension + U2 Network Boot Camp for the Full-Stack Web Development Coding Boot Camp 2021-2023 as a step by step tutorial guide/module that was required to be recreated/replicated/reproduced by me, Nikita "Nik" Sharpio aka account named "niksharpkings", and other students alike. I am not the true claiming owner/designer/creator/developer of this project or files excluding the README.md, .gitignore, LICENSE, Class-Notes-(...).md and some of the original content was modified with my own personal comments and additional tunes. I do not intend or plan to claim any ownership or rights of the original content of this GitHub repository, but I was & am endorsed, ratified, recommend, advised, & allowed to publish this dittoed repository by the school program from scratch as reference proof or enrollment & a profile model, guidance, pointer, reference, or example.  Any modifications I made to the original files will be in the root directory, otherwise all "original content" will be stored in "UCLAxU2-Original-SnapShot" folder.
-
-
