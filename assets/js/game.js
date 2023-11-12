@@ -1,5 +1,4 @@
-
-window.alert(`Site hostname: ${location.hostname }
+window.alert(`Site hostname: ${location.hostname}
 This is an alert! JavaScript is running! This Site will use this alert to simulate the game, also see console.`);
 // function to generate a random numeric value
 let randomNumber = function (min, max) {
@@ -7,25 +6,40 @@ let randomNumber = function (min, max) {
   return value;
 };
 
+let fightOrSkip = function () {
+    // ask player if they'd like to fight or run
+  let promptFight = window.prompt('Would you like to FIGHT or SKIP this battle? Enter "FIGHT" or "SKIP" to choose.');
+  // Conditional Recursive Function Call
+  if (promptFight === "" || promptFight === null) {
+    window.alert("You need to provide a valid answer! Please try again.");
+    return fightOrSkip();
+  }
+  promptFight = promptFight.toLowerCase();
+  // if player picks "skip" confirm and then stop the loop
+  if (promptFight === "skip" || promptFight === "SKIP") {
+    // confirm player wants to skip
+    const confirmSkip = window.confirm("Are you sure you'd like to quit?");
+    // if yes (true), leave fight
+    if (confirmSkip) {
+      window.alert(`${playerInfo.name} has decided to skip this fight. Goodbye!`);
+      // subtract money from playerMoney for skipping, but don't let them go into the negative
+      playerInfo.money = Math.max(0, playerInfo.money - 10);
+      return true;
+      //console.log("playerInfo.money", playerInfo.money)
+      //shop();
+    }
+  }
+  return false;
+}
+
 // fight function (now with parameter for enemy's object holding name, health, and attack values)
 const fight = (enemy) => {
   let damage;
   while (playerInfo.health > 0 && enemy.health > 0) {
-    // ask player if they'd like to fight or run
-    const promptFight = window.prompt('Would you like to FIGHT or SKIP this battle? Enter "FIGHT" or "SKIP" to choose.');
-    // if player picks "skip" confirm and then stop the loop
-    if (promptFight === "skip" || promptFight === "SKIP") {
-      // confirm player wants to skip
-      const confirmSkip = window.confirm("Are you sure you'd like to quit?");
-      // if yes (true), leave fight
-      if (confirmSkip) {
-        window.alert(`${playerInfo.name} has decided to skip this fight. Goodbye!`);
-        // subtract money from playerInfo.money for skipping
-        playerInfo.money -= 10;
-        console.log("playerInfo.money", playerInfo.money)
-        break;
-      }
-    }
+    if (fightOrSkip()) {
+      // if true, leave fight by breaking loop
+      break;
+    };
     // generate random damage value based on player's attack power
     damage = randomNumber(playerInfo.attack - 3, playerInfo.attack);
     // remove enemy's health by subtracting the amount set in the playerInfo.attack variable
@@ -139,8 +153,8 @@ const shop = function () {
 
 /* GAME INFORMATION / VARIABLES */
 // function to set name
-var getPlayerName = function() {
-//to guarantee entering the loop at least once to prompt the player for the player-robot name
+var getPlayerName = function () {
+  //to guarantee entering the loop at least once to prompt the player for the player-robot name
   var name = "";
   //condition that checks if name is blank or null
   while (name === "" || name === null) {
@@ -156,12 +170,12 @@ let playerInfo = {
   health: 100,
   attack: 10,
   money: 10,
-  reset: function() {
+  reset: function () {
     this.health = 100;
     this.money = 10;
     this.attack = 10;
   },
-  refillHealth: function() {
+  refillHealth: function () {
     if (this.money >= 7) {
       window.alert("Refilling player's health by 20 for 7 dollars.");
       this.health += 20;
@@ -171,12 +185,12 @@ let playerInfo = {
       window.alert("You don't have enough money!");
     }
   },
-  upgradeAttack: function() {
+  upgradeAttack: function () {
     if (this.money >= 7) {
       window.alert("Upgrading player's attack by 6 for 7 dollars.");
       this.attack += 6;
       this.money -= 7;
-    } 
+    }
     else {
       window.alert("You don't have enough money!");
     }
