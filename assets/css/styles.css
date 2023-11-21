@@ -68,10 +68,14 @@ header {
   overflow: hidden;
 } /* header */
 
+
 header h1 a {
   font-size: 25px;
 }
 header h1 p {
+  font-size: 15px;
+}
+header h1 p a {
   font-size: 15px;
 }
 nav {
@@ -235,12 +239,12 @@ hr:after {
 details {
 /*Display stuff*/
   display: flex;
-  align-content: center;
+  /*align-content: center;*/
   align-items: stretch;
-  align-self: center;
+  /*align-self: center;*/
   justify-content: center;
   justify-items: center;
-  justify-self: center;
+  /*justify-self: center;*/
 /*Box model stuff*/
   width: auto;
   max-width: 1200px;

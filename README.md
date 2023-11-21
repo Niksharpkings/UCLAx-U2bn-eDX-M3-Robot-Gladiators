@@ -134,6 +134,8 @@ UCLAx-U2bn-eDX-M3-Robot-Gladiators
 
 ##### Version:
 
+`v2.0.2 - | Added my custom Script | Set my game.js to defer on the head section | Added Favicon.ico and robots.txt | set up the html for my new custom upgraded version of it |`
+
 `v2.0.1 - | Revamped / Redone / Remastered - Basicilly, I remade it my way and better then the original |`
 
 `v1.0.5 - | 3.4 & 3.5 Module |`
